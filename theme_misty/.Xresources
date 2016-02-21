@@ -1,0 +1,73 @@
+#include "/home/sasha/.colors/s3r0"
+
+!#### URXVT ####!
+urxvt*perl-lib:           /usr/lib/urxvt/perl
+urxvt*perl-ext-common:    default,matcher,clipboard
+urxvt*perl-matcher:       1
+urxvt*matcher-button:     3
+purxvt*url-launcher:       /usr/bin/firefox
+!URxvt*matcher.button: 1
+!URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+urxvt*cursorUnderline:    1
+urxvt*letterspace:        -5
+!urxvt*fading:            10
+!urxvt*fadeColor:         #000000
+urxvt*cursorBlink:        true
+urxvt*scrollBar:          false
+urxvt*depth:              32
+urxvt*internalBorder:     5
+urxvt*dynamicColors:      on
+urxvt.urgentOnBell:       true
+
+URxvt*font:           xft:terminus:hinting=true:pixelsize=12:antialias=false
+URxvt*boldFont:       xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false
+URxvt*italicFont:     xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false
+URxvt*boldItalicFont: xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false
+
+urxvt*bolditalicFont:     -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-*
+
+Xft.antialias: 1
+Xft.autohint:  0
+Xft.dpi:       96
+Xft.hinting:   1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba:      rgb
+
+
+!#### XCLOCK ####!
+xclock*majorColor:  #9a875f
+xclock*minorColor:  #9a875f
+xclock*minuteColor: #9a875f
+xclock*hourColor:   #9a875f
+xclock*secondColor: #9a875f
+
+
+!#### XSCREENSAVER ####!
+!font settings
+xscreensaver.Dialog.headingFont:        -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+!!general dialog box (affects main hostname, username, password text)
+!xscreensaver.Dialog.foreground:         #ffffff
+!xscreensaver.Dialog.background:         #111111
+!xscreensaver.Dialog.topShadowColor:     #111111
+!xscreensaver.Dialog.bottomShadowColor:  #111111
+!xscreensaver.Dialog.Button.foreground:  #666666
+!xscreensaver.Dialog.Button.background:  #ffffff
+!!username/password input box and date text colour
+!xscreensaver.Dialog.text.foreground:    #666666
+!xscreensaver.Dialog.text.background:    #ffffff
+!xscreensaver.Dialog.internalBorderWidth:24
+!xscreensaver.Dialog.borderWidth:        20
+!xscreensaver.Dialog.shadowThickness:    2
+!!timeout bar (background is actually determined by Dialog.text.background)
+!xscreensaver.passwd.thermometer.foreground:  #ff0000
+!xscreensaver.passwd.thermometer.background:  #000000
+!xscreensaver.passwd.thermometer.width:       8
+!!datestamp format--see the strftime(3) manual page for details
+!xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y

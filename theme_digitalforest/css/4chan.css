@@ -1,0 +1,83 @@
+@-moz-document domain("boards.4chan.org") {
+
+body {
+	background:#262222;
+	color:#c0b18b;
+	font-family:terminus,terminus,terminus;
+	font-size:8pt;
+	margin-left:0;
+	margin-right:0;
+	margin-top:5px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+
+div.reply {
+  background-color: #303030;
+  border-width: medium 1px 1px medium;
+  border-style: none solid solid none;
+  border-color: -moz-use-text-color #303030 #303030 -moz-use-text-color;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  display: table;
+  padding: 0px;
+}
+
+hr {
+    border-width: 1px medium medium;
+    border-style: solid none none;
+    border-color: #262222 -moz-use-text-color -moz-use-text-color;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    height: 0px;
+}
+
+.burichan_new .backlink a:hover, .yotsuba_b_new .backlink a:hover {
+    color: #887879 !important;
+}
+.burichan_new .backlink a, .yotsuba_b_new .backlink a {
+    color: #775759 !important;
+}
+
+div.post div.postInfo span.subject {
+    color: #7b8748;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #bf966a !important;
+}
+.quoteLink, .quotelink, .deadlink {
+    color: #6d715b !important;
+    text-decoration: underline;
+}
+
+blockquote > span.quote {
+    color: #7b8748;
+}
+
+a, a:visited {
+    color: #6d715e;
+    text-decoration: none;
+}
+
+div.post div.postInfo span.nameBlock span.name {
+    color: #775759;
+    font-weight: bold;
+}
+
+div.post div.postInfo span.postNum a {
+    text-decoration: none;
+    color: #6d715e;
+}
+
+.sideArrows, input[type="checkbox"] {
+    display: none !important ;
+}

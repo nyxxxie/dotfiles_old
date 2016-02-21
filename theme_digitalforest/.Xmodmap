@@ -1,0 +1,5 @@
+! My laptop doesn't have a left super key,
+! so lets make capslock into it
+keycode 66 = Super_L
+clear Lock
+add Mod4 = Super_L

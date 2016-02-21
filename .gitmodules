@@ -1,0 +1,57 @@
+[submodule "static/.tmux/plugins/tpm"]
+	path = static/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "static/.vim/bundle/SmartColumnColor"]
+	path = static/.vim/bundle/SmartColumnColor
+	url = https://github.com/vim-scripts/SmartColumnColor.git
+[submodule "static/.vim/bundle/TagHighlight"]
+	path = static/.vim/bundle/TagHighlight
+	url = https://github.com/magic-dot-files/TagHighlight.git
+[submodule "static/.vim/bundle/YouCompleteMe"]
+	path = static/.vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "static/.vim/bundle/delimitMate"]
+	path = static/.vim/bundle/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "static/.vim/bundle/nerdcommenter"]
+	path = static/.vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "static/.vim/bundle/tagbar"]
+	path = static/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "static/.vim/bundle/ultisnips"]
+	path = static/.vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "static/.vim/bundle/unite.vim"]
+	path = static/.vim/bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "static/.vim/bundle/vim-airline"]
+	path = static/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "static/.vim/bundle/vim-easytags"]
+	path = static/.vim/bundle/vim-easytags
+	url = https://github.com/xolox/vim-easytags.git
+[submodule "static/.vim/bundle/vim-gitgutter"]
+	path = static/.vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "static/.vim/bundle/vim-misc"]
+	path = static/.vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
+[submodule "static/.vim/bundle/vim-multiple-cursors"]
+	path = static/.vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "static/.vim/bundle/vim-pathogen"]
+	path = static/.vim/bundle/vim-pathogen
+	url = git@github.com:tpope/vim-pathogen.git
+[submodule "static/.vim/bundle/vim-session"]
+	path = static/.vim/bundle/vim-session
+	url = https://github.com/xolox/vim-session.git
+[submodule "static/.vim/bundle/vim-signature"]
+	path = static/.vim/bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "static/.vim/bundle/vim-vinegar"]
+	path = static/.vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule "static/.vim/bundle/vim-windowswap"]
+	path = static/.vim/bundle/vim-windowswap
+	url = https://github.com/wesQ3/vim-windowswap.git

@@ -1,0 +1,155 @@
+#Set mod key
+set $mod Mod4
+
+gaps inner 25
+gaps outer 0
+
+#Font
+font pango:Terminus 11px
+#font pango:DejaVu Sans Mono 8
+
+new_window pixel 1
+focus_follows_mouse yes
+
+#don't move to neighbouring screen with hjkl
+force_focus_wrapping yes
+
+#use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+#start a terminal
+bindsym $mod+Return exec urxvt
+
+#kill focused window
+bindsym $mod+c kill
+
+#start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+
+#screen lock
+bindsym $mod+l exec "xscreensaver-command -lock"
+#bindsym Control+$mod+l exec "slock"
+
+#change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+#move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#split in horizontal orientation
+bindsym $mod+h split h
+
+#split in vertical orientation
+bindsym $mod+v split v
+
+#enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen
+
+#change container layout (tabbed, toggle split)
+bindsym $mod+t layout tabbed
+bindsym $mod+s layout toggle split
+
+#move container between displays
+bindsym $mod+semicolon move workspace to output right
+
+#toggle tiling / floating
+bindsym $mod+Shift+f floating toggle
+
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#### CREATE RESIZE MODE ####
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Adjust window size by 10 px
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+#### i3 BAR ####
+bar {
+        position top
+        status_command ~/.i3/bin/conky-wrapper
+        colors {
+                statusline #6d715e
+                background #262222
+                focused_workspace #262222 #262222 #529366
+                inactive_workspace #262222 #262222 #43454f
+        }
+}
+
+
+#### RULES FOR SPECIFIC APPLICATIONS ####
+# by APPLICATION (WM_CLASS)
+# Note: class is typically useful for applying custom settings to
+#       to entire applications, including child windows. If this
+#       isn't want you want see the ROLE section, below.
+# Tip: To find out what these values might be run:
+#       xprop | grep -i 'class'
+#for_window [class="File-roller"] floating enable, border normal
+for_window [class="Steam"] floating enable border pixel 0
+for_window [class="com-atlauncher-App"] floating enable border pixel 0
+for_window [class="Steam.exe"] floating enable border pixel 0
+for_window [class="mainwindow.py"] floating enable border pixel 0
+for_window [class="Pavucontrol"] floating enable border pixel 0
+
+# by ROLE (WM_WINDOW_ROLE)
+# Note: window_role is Typically useful for effecting child windows
+#       such as instant messaging converstations, email composition
+#       windows, etc.
+# Tip: To find out what these values might be run:
+#       xprop | grep -i 'role'#
+#for_window [window_role="conversation"] floating enable, border normal
+
+
+#### STARTUP PROGRAMS ####
+exec nitrogen --restore
+exec mpd
+exec nm-applet
+exec compton --config ~/.config/compton.conf
+exec xscreensaver
+exec xmodmap ~/.Xmodmap
+exec pasystray
