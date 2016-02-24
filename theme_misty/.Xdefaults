@@ -1,5 +1,3 @@
-
-
 !------------------------------------------------------------------------------
 ! XFT Settings
 URxvt*termName: xterm-256color
@@ -41,47 +39,48 @@ URxvt*keysym.End: \033[4~
 !------------------------------------------------------------------------------
 ! URxvt Colors
 
-*cursorColor:  #746c48
+*cursorColor:                         #9a875f
 *VT100.colorBDMode:                   true
 *VT100.colorULMode:                   true
 *VT100.colorUL:                       magenta
 *VT100.veryBoldColors:                6
 
-! special
-*foreground:   #746c48
-*background:   #170f0d
+*background: [200]#181512
+*foreground: #bea492
 
-! black
-*color0:       #392925
-*color8:       #544b2e
+!black
+*color0:#504339
+*color8:#817267
 
-! red
-*color1:       #98504c
-*color9:       #af492f
+!red
+*color1:#8c644c
+*color9:#9f7155
 
-! green
-*color2:       #908f32
-*color10:      #c3c13d
+!green
+*color2:#746c48
+*color10:#857b52
 
-! yellow
-*color3:       #aa964c
-*color11:      #c8b55b
+!yellow
+*color3:#908a66
+*color11:#9c956e
 
-! blue
-*color4:       #7b854e
-*color12:      #70a16c
+!blue
+*color4:#646a6d
+*color12:#71777a
 
-! magenta
-*color5:       #6b5644
-*color13:      #98724c
+!magenta
+*color5:#605655
+*color13:#656565
 
-! cyan
-*color6:       #5c5142
-*color14:      #778725
+!cyan
+*color6:#4b5c5e
+*color14:#556d70
 
-! white
-*color7:       #c8b55b
-*color15:      #e4dc8c
+!white
+*color7:#9a875f
+*color15:#9a875f
+
+
 !------------------------------------------------------------------------------
 ! Man pages colors
 
