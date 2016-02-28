@@ -45,7 +45,7 @@ URxvt*keysym.End: \033[4~
 *VT100.colorUL:                       magenta
 *VT100.veryBoldColors:                6
 
-*background: [200]#181512
+*background: #181512
 *foreground: #bea492
 
 !black
