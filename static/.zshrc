@@ -133,6 +133,7 @@ conf() {
         xresources) vim ~/.Xresources && xrdb ~/.Xresources ;;
         tint2)      vim ~/.config/tint2/xmonad.tint2rc ;;
         zsh)        vim ~/.zshrc && source ~/.zshrc ;;
+        ssh)        vim ~/.ssh/config ;;
         hosts)      sudoedit /etc/hosts ;;
         *)          echo "Unknown application: $1" ;;
     esac
