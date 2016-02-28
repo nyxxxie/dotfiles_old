@@ -82,6 +82,9 @@ set splitright
 exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
 set list
 
+" Change the split character from | to │
+set fillchars+=vert:│
+
 " Turns on highlighting
 syntax on
 
