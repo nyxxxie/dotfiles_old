@@ -29,7 +29,6 @@ HISTSIZE=10000
 
 ########################### Aliases ###########################
 #alias upgrade='sudo pacman -Syu && yaourt -Syu --aur'
-alias steam-wine='wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe -no-dwrite'
 alias ls='ls --color=auto -F'
 alias l='ls -lAh --color=auto'
 alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
