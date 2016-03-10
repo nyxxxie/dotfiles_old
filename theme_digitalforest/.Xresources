@@ -1,5 +1,3 @@
-#include "/home/sasha/.colors/s3r0"
-
 !#### URXVT ####!
 urxvt*perl-lib:           /usr/lib/urxvt/perl
 urxvt*perl-ext-common:    default,matcher,clipboard
