@@ -218,6 +218,9 @@ for s = 1, screen.count() do
     mywibox[s]:set_widget(layout)
 end
 
+
+-------------------------------------------------------------------------------
+
 -- Mouse bindings
 root.buttons(awful.util.table.join(
     awful.button({ }, 3, function () menu_main:toggle() end),
@@ -261,6 +264,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
     awful.key({ modkey,           }, "l",      function() awful.tag.incmwfact(0.05)          end),
+    awful.key({ modkey,           }, "l",
+        function()
+            awful.util.spawn_with_shell("xscreensaver-command -lock || slock ")
+        end),
     awful.key({ modkey,           }, "h",      function() awful.tag.incmwfact(-0.05)         end),
     awful.key({ modkey, "Shift"   }, "h",      function() awful.tag.incnmaster(1)            end),
     awful.key({ modkey, "Shift"   }, "l",      function() awful.tag.incnmaster(-1)           end),
