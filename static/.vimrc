@@ -2,6 +2,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+
 "+----------: Basic options :-------------------------------------------------+
 
 " What is this 'Vee-Eye' of which you speak
@@ -113,7 +114,7 @@ if &term =~ '256color'
 endif
 
 " Set the color scheme
-colorscheme theme
+source ~/.vimtheme
 
 " Make tabs less wide and terrible
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
@@ -165,9 +166,6 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_theme='digitalforest'
-let g:airline_left_sep = '█▓░'
-let g:airline_right_sep = '░▓█'
 
 
 "+----------: YouCompleteMe settings :----------------------------------------+

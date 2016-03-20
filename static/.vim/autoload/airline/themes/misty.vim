@@ -20,7 +20,7 @@
 " First, let's define an empty dictionary and assign it to the "palette"
 " variable. The # is a separator that maps with the directory structure. If
 " you get this wrong, Vim will complain loudly.
-let g:airline#themes#digitalforest#palette = {}
+let g:airline#themes#misty#palette = {}
 
 " First let's define some arrays. The s: is just a VimL thing for scoping the
 " variables to the current script. Without this, these variables would be
@@ -63,10 +63,10 @@ let s:IM = [ '#40403C',  238 ]
 " Inactive mode
 let s:IA = [ '#767676' , s:N3[1] , 243 , s:N3[3] , '' ]
 
-let g:airline#themes#digitalforest#palette = {}
+let g:airline#themes#misty#palette = {}
 
 " Colors for the tabline thing at the top of the vim window
-let g:airline#themes#digitalforest#palette.tabline = {
+let g:airline#themes#misty#palette.tabline = {
       \ 'airline_tab':     ['#2aa198', '#003f3f', 238, 234, ''],
       \ 'airline_tabsel':  ['#ffffff', '#2e8b57', 238, 235, ''],
       \ 'airline_tabtype': ['#ffffff', '#005252', 238, 234, ''],
@@ -74,23 +74,23 @@ let g:airline#themes#digitalforest#palette.tabline = {
       \ 'airline_tabmod':  ['#ffffff', '#780000', 5,   235, ''],
       \ }
 
-let g:airline#themes#digitalforest#palette.accents = {
+let g:airline#themes#misty#palette.accents = {
       \ 'red': [ '#E5786D' , '' , 203 , '' , '' ],
       \ }
 
 
-let g:airline#themes#digitalforest#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
-let g:airline#themes#digitalforest#palette.normal_modified = {
+let g:airline#themes#misty#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
+let g:airline#themes#misty#palette.normal_modified = {
     \ 'airline_c': [ s:N3[0], s:N3[1], 5, s:N3[3], '' ] }
 
-let g:airline#themes#digitalforest#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#misty#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 
-let g:airline#themes#digitalforest#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
+let g:airline#themes#misty#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 
-let g:airline#themes#digitalforest#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
+let g:airline#themes#misty#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
 
-let g:airline#themes#digitalforest#palette.inactive = airline#themes#generate_color_map(s:N1, s:N1, s:N1)
-let g:airline#themes#digitalforest#palette.inactive_modified = {
+let g:airline#themes#misty#palette.inactive = airline#themes#generate_color_map(s:N1, s:N1, s:N1)
+let g:airline#themes#misty#palette.inactive_modified = {
     \ 'airline_a': [ s:N1[0], s:N1[1], 8, s:N1[3], '' ],
     \ 'airline_b': [ s:N2[0], s:N2[1], 8, s:N2[3], '' ],
     \ 'airline_c': [ s:N3[0], s:N3[1], 8, s:N3[3], '' ] }
@@ -102,7 +102,7 @@ let g:airline#themes#digitalforest#palette.inactive_modified = {
 " this means is that regardless of which section the part is defined in, it
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
-let g:airline#themes#digitalforest#palette.accents = {
+let g:airline#themes#misty#palette.accents = {
       \ 'red': [ '#ff0000' , '' , 160 , ''  ]
       \ }
 
