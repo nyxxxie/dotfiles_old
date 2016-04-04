@@ -1,4 +1,5 @@
 "+----------: Start up pathogen :---------------------------------------------+
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
@@ -122,6 +123,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 " Turn on line numbers
 set number
 
+
 "+----------: Basic key binds :-----------------------------------------------+
 
 " Navigate splits without using ctrl+w
@@ -159,6 +161,7 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 
 " Shows highlighting as we are searching
 nnoremap <silent> <leader>zz :let &scrolloff=999-&scrolloff<CR>
+
 
 "+----------: Airline settings :----------------------------------------------+
 
@@ -274,3 +277,14 @@ endfunction
 
 " Set <space> as primary trigger
 inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
+
+"+----------: Delimitmate settings :------------------------------------------+
+
+" Required so that we can bind to enter and not be interfere with ultisnips
+imap <expr> <CR> pumvisible() ? neocomplcache#close_popup() : '<Plug>delimitMateCR'
+
+" Insert a line between brackets when enter is pressed
+let g:delimitMate_expand_cr = 2
+
+" Insert a space between brackets when space is pressed
+let g:delimitMate_expand_space = 1
