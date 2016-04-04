@@ -31,10 +31,10 @@ let g:airline#themes#misty#palette = {}
 
 "          [  guifg,     guibg,    ctermfg, ctermbg, opts ]
 " Normal mode
-let s:N1 = [ '#141413', '#CAE682',   6,     234 ] " mode
-let s:N2 = [ '#CAE682', '#32322F',   6,     234 ] " info
-let s:N3 = [ '#CAE682', '#242424', 238,     234 ] " statusline
-let s:N4 = [ '#86CD74', 113 ]                     " mode modified
+let s:N1 = [ '#141413', '#CAE682',   7,     238 ] " mode
+let s:N2 = [ '#CAE682', '#32322F',   6,     236 ] " info
+let s:N3 = [ '#CAE682', '#242424', 239,     234 ] " statusline
+let s:N4 = [ '#141413', '#CAE682',   7,     90  ] " mode modified
 
 " Insert mode
 let s:I1 = [ '#141413', '#FDE76E',   5,     234 ]
