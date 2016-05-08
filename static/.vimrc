@@ -281,7 +281,7 @@ inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 "+----------: Delimitmate settings :------------------------------------------+
 
 " Required so that we can bind to enter and not be interfere with ultisnips
-imap <expr> <CR> pumvisible() ? neocomplcache#close_popup() : '<Plug>delimitMateCR'
+"imap <expr> <CR> pumvisible() ? neocomplcache#close_popup() : '<Plug>delimitMateCR'
 
 " Insert a line between brackets when enter is pressed
 let g:delimitMate_expand_cr = 2

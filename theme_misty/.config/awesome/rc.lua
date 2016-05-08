@@ -104,11 +104,17 @@ menu_awesome = {
    { "quit", awesome.quit }
 }
 
+menu_system = {
+   { "poweroff", "poweroff" },
+   { "reboot", "reboot" },
+}
+
 menu_main = awful.menu({
     items = {
         { "general", menu_general },
         { "games", menu_games },
-        { "awesome", menu_awesome }
+        { "awesome", menu_awesome },
+        { "system", menu_system }
     }
 })
 
@@ -406,7 +412,7 @@ client.connect_signal("manage", function (c, startup)
         end
     end
 
-    local titlebars_enabled = true
+    local titlebars_enabled = false
     if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
         -- buttons for the titlebar
         local buttons = awful.util.table.join(
