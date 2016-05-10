@@ -1,0 +1,91 @@
+!------------------------------------------------------------------------------
+! XFT Settings
+URxvt*termName: xterm-256color
+Xft.dpi:                                       96 
+Xft.antialias:                                  true
+Xft.rgba:                                       rgb
+Xft.hinting:                                    true
+Xft.hintstyle:                                  hintslight
+
+
+URxvt.perl-ext-common:  default,matcher,vtwheel
+URxvt.url-launcher:      /usr/bin/firefox
+URxvt.matcher.button:   1
+
+
+URxvt.depth: 32
+URxvt.saveLines: 12000
+!URxvt.background: [92]#091114
+
+!------------------------------------------------------------------------------
+! URXVT - Settings
+
+URxvt*geometry:                                 130x40
+URxvt*borderLess:                               false
+URxvt*scrollBar:                                false
+URxvt*cursorBlink:                              true
+URxvt*cursorUnderline:                          false
+URxvt*scrollColor:                              #151515
+URxvt*perl-ext-common:                          default,clipboard,url-select,keyboard-select,vtwheel
+URxvt*font:                                     xft:terminus:hinting=true:pixelsize=12:antialias=false
+URxvt*boldFont:                                 xft:terminus:style=bold:hinting=true:pixelsize=12:antialias=false
+URxvt*italicFont:                               xft:terminus:style=italic:hinting=true:pixelsize=12:antialias=false
+URxvt*boldItalicFont:                           xft:terminus:style=bolditalic:hinting=true:pixelsize=12:antialias=false
+URxvt.underlineURLs:                            true
+URxvt.url-select.launcher:                      /usr/bin/firefox
+URxvt.url-select.underline:                     true
+URxvt*keysym.Home: \033[1~
+URxvt*keysym.End: \033[4~
+!------------------------------------------------------------------------------
+! URxvt Colors
+
+*cursorColor:                         #9a875f
+*VT100.colorBDMode:                   true
+*VT100.colorULMode:                   true
+*VT100.colorUL:                       magenta
+*VT100.veryBoldColors:                6
+
+*background: #181512
+*foreground: #bea492
+
+!black
+*color0:#504339
+*color8:#817267
+
+!red
+*color1:#8c644c
+*color9:#9f7155
+
+!green
+*color2:#746c48
+*color10:#857b52
+
+!yellow
+*color3:#908a66
+*color11:#9c956e
+
+!blue
+*color4:#646a6d
+*color12:#71777a
+
+!magenta
+*color5:#605655
+*color13:#656565
+
+!cyan
+*color6:#4b5c5e
+*color14:#556d70
+
+!white
+*color7:#9a875f
+*color15:#9a875f
+
+
+!------------------------------------------------------------------------------
+! Man pages colors
+
+!*VT100.colorBDMode:                             true
+!*VT100.colorBD:                                 red
+!*VT100.colorULMode:                             true
+!*VT100.colorUL:                                 magenta
+!*VT100.veryBoldColors:                          6
