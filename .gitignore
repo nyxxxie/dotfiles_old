@@ -3,3 +3,5 @@ static/.vim/undo/
 static/.vim/viminfo
 theme_digitalforest/.i3/bin/
 *error.log
+static/.vim/.netrwhist
+static/.vim/sessions/
