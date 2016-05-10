@@ -19,7 +19,20 @@ setopt EXTENDED_HISTORY     #Save when and how long a command was run
 setopt COMPLETEALIASES      #Tab complete aliases
 
 ########################### Exports ###########################
-export EDITOR="vim"
+
+# Set EDITOR variable to the best of whatever editor we have
+# available
+if hash nvim 2>/dev/null; then
+    export EDITOR="nvim"
+    echo "EDITOR IS NVIM"
+elif hash vim 2>/dev/null; then
+    export EDITOR="vim"
+    echo "EDITOR IS VIM"
+else
+    export EDITOR="vi"
+    echo "EDITOR IS VI"
+fi
+
 export ANDROID_HOME=/opt/android-sdk
 
 ########################### Assigns ###########################
@@ -31,6 +44,8 @@ HISTSIZE=10000
 #alias upgrade='sudo pacman -Syu && yaourt -Syu --aur'
 alias ls='ls --color=auto -F'
 alias l='ls -lAh --color=auto'
+alias ll='ls -lAh --color=auto'
+alias e='$EDITOR'
 alias cpv='rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --'
 alias svim='sudoedit'
 alias upgrade='yaourt -Syu --aur --devel'
