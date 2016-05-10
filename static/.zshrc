@@ -24,13 +24,10 @@ setopt COMPLETEALIASES      #Tab complete aliases
 # available
 if hash nvim 2>/dev/null; then
     export EDITOR="nvim"
-    echo "EDITOR IS NVIM"
 elif hash vim 2>/dev/null; then
     export EDITOR="vim"
-    echo "EDITOR IS VIM"
 else
     export EDITOR="vi"
-    echo "EDITOR IS VI"
 fi
 
 export ANDROID_HOME=/opt/android-sdk
