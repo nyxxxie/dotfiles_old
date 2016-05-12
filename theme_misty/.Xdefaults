@@ -39,47 +39,46 @@ URxvt*keysym.End: \033[4~
 !------------------------------------------------------------------------------
 ! URxvt Colors
 
-*cursorColor:                         #9a875f
+*cursorColor:                         #bea492
 *VT100.colorBDMode:                   true
 *VT100.colorULMode:                   true
 *VT100.colorUL:                       magenta
 *VT100.veryBoldColors:                6
 
-![232&252]
-*background: #080808
-*foreground: #d0d0d0
+*background: #151210
+*foreground: #bea492
 
-!black [233]
-*color0:#121212
-*color8:#121212
+!black 
+*color0:#151210
+*color8:#151210
 
-!red [94&130]
-*color1:#875f00
-*color9:#af5f00
+!red
+*color1:#8c644c
+*color9:#9f7155
 
-!green [58&100]
-*color2:#5f5f00
-*color10:#878700
+!green
+*color2:#746c48
+*color10:#857b52
 
-!yellow [136&178]
-*color3:#af8700
-*color11:#d7af00
+!yellow
+*color3:#908a66
+*color11:#9c956e
 
-!blue [66&67]
-*color4:#5f8787
-*color12:#5787af
+!blue
+*color4:#646a6d
+*color12:#71777a
 
-!magenta [53&90]
-*color5:#5f005f
-*color13:#870087
+!magenta
+*color5:#605655
+*color13:#656565
 
-!cyan [23&24]
-*color6:#005f5f
-*color14:#005f87
+!cyan
+*color6:#4b5c5e
+*color14:#556d70
 
-!white [252%250]
-*color7:#d0d0d0
-*color15:#bcbcbc
+!white
+*color7:#817267
+*color15:#504339
 
 
 !------------------------------------------------------------------------------
