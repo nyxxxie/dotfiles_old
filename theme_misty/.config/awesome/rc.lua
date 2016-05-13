@@ -92,6 +92,10 @@ menu_general = {
     { "bitwig studio", "bitwig-studio"}
 }
 
+menu_util = {
+    { "gdmap", "gdmap"}
+}
+
 menu_games = {
     { "steam", "steam"},
     { "steam (wine)", "steam-wine"}
@@ -112,6 +116,7 @@ menu_system = {
 menu_main = awful.menu({
     items = {
         { "general", menu_general },
+        { "utilities", menu_util },
         { "games", menu_games },
         { "awesome", menu_awesome },
         { "system", menu_system }
