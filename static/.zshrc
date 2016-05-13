@@ -218,7 +218,8 @@ unset SSH_ASKPASS
 export ZSH=/home/$USER/.oh-my-zsh
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
-    ZSH_THEME="gallois"
+    #ZSH_THEME="gallois"
+    ZSH_THEME="prey"
     plugins=(git nmap pyenv tmux)
 
     source $ZSH/oh-my-zsh.sh
