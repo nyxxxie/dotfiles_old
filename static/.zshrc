@@ -151,59 +151,29 @@ conf() {
 }
 
 ########################### Prompt style ###########################
-host_color=cyan
-history_color=yellow
-user_color=green
-root_color=red
-directory_color=magenta
-error_color=red
-jobs_color=green
+# Depends on the git plugin for work_in_progress()
 
-host_prompt="%{$fg_bold[$host_color]%}%m%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-jobs_prompt1="%{$fg_bold[$jobs_color]%}(%{$reset_color%}"
+#Customized git status, oh-my-zsh currently does not allow render dirty status before branch
+git_custom_status() {
+  local cb=$(git_current_branch)
+  if [ -n "$cb" ]; then
+    echo "$(parse_git_dirty)%{$fg_bold[yellow]%}$(work_in_progress)%{$reset_color%}$ZSH_THEME_GIT_PROMPT_PREFIX$(git_current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  fi
+}
 
-jobs_prompt2="%{$fg[$jobs_color]%}%j%{$reset_color%}"
+# RVM component of prompt
+ZSH_THEME_RVM_PROMPT_PREFIX="%{$fg[red]%}["
+ZSH_THEME_RVM_PROMPT_SUFFIX="]%{$reset_color%}"
 
-jobs_prompt3="%{$fg_bold[$jobs_color]%})%{$reset_color%}"
+# Combine it all into a final right-side prompt
+RPS1='$(git_custom_status)$(ruby_prompt_info) $EPS1'
 
-jobs_total="%(1j.${jobs_prompt1}${jobs_prompt2}${jobs_prompt3} .)"
-
-history_prompt1="%{$fg_bold[$history_color]%}[%{$reset_color%}"
-
-history_prompt2="%{$fg[$history_color]%}%h%{$reset_color%}"
-
-history_prompt3="%{$fg_bold[$history_color]%}]%{$reset_color%}"
-
-history_total="${history_prompt1}${history_prompt2}${history_prompt3}"
-
-error_prompt1="%{$fg_bold[$error_color]%}<%{$reset_color%}"
-
-error_prompt2="%{$fg[$error_color]%}%?%{$reset_color%}"
-
-error_prompt3="%{$fg_bold[$error_color]%}>%{$reset_color%}"
-
-error_total="%(?..${error_prompt1}${error_prompt2}${error_prompt3} )"
-
-case "$TERM" in
-  (screen)
-    function precmd() { print -Pn "\033]0;S $TTY:t{%100<...<%~%<<}\007" }
-  ;;
-  (xterm)
-    directory_prompt=""
-  ;;
-  (*)
-    directory_prompt="%{$fg[$directory_color]%}%~%{$reset_color%} "
-  ;;
-esac
-
-if [[ $USER == root ]]; then
-    post_prompt="%{$fg_bold[$root_color]%}%#%{$reset_color%}"
-else
-    post_prompt="%{$fg_bold[$user_color]%}%#%{$reset_color%}"
-fi
-
-PS1="${host_prompt} ${directory_prompt}${error_total}${post_prompt} "
+PROMPT='%{$fg[cyan]%}[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
 
 ########################### Misc ###########################
 # Disable x11's ugly passphrase prompt
@@ -219,7 +189,7 @@ export ZSH=/home/$USER/.oh-my-zsh
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then
     #ZSH_THEME="gallois"
-    ZSH_THEME="prey"
+    #ZSH_THEME="prey"
     plugins=(git nmap pyenv tmux)
 
     source $ZSH/oh-my-zsh.sh
