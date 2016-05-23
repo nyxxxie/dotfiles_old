@@ -1,7 +1,7 @@
 let g:colors_name="Your theme name here"
 
 hi Normal                       ctermfg=7
-"hi Visual
+hi Visual                       ctermfg=0   ctermbg=7
 "hi Flash
 "hi Cursor
 "hi lCursor
