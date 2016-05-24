@@ -1,9 +1,22 @@
-" Clear existing highlights
+" Initialization
+set background=dark
+
 hi clear
+if exists('syntax_on')
+    syntax reset
+endif
 
-" Set theme name
-let g:colors_name="Your theme name here"
+let g:colors_name = 'digitalforest'
 
+if ! has('gui_running')
+    if &t_Co != 256
+        echoe 'The ' . g:colors_name . ' color scheme requires gvim or a 256-color terminal'
+
+        finish
+    endif
+endif
+
+" Define colors
 hi Normal                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Visual                 ctermfg=0   ctermbg=15  guifg=#FFFFFF   guibg=#FFFFFF
 hi Flash                  ctermfg=7   ctermbg=1   guifg=#FFFFFF   guibg=#FFFFFF
@@ -43,16 +56,16 @@ hi Constant               ctermfg=5   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Special                ctermfg=4   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Identifier             ctermfg=2   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Statement              ctermfg=5   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-hi PreProc                ctermfg=8   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi PreProc                ctermfg=15  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Type                   ctermfg=6   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi String                 ctermfg=1   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Number                 ctermfg=1   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-hi Define                 ctermfg=8   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi Define                 ctermfg=15  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Error                  ctermfg=88  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Function               ctermfg=3   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-hi Include                ctermfg=8   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi Include                ctermfg=15  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi PreCondit              ctermfg=51  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-hi Keyword                ctermfg=8   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi Keyword                ctermfg=15  ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Search                 ctermfg=137 ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Title                  ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Delimiter              ctermfg=160 ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
