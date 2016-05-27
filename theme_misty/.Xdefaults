@@ -50,11 +50,7 @@ URxvt*keysym.End: \033[4~
 
 !black 
 *color0:#151210
-<<<<<<< HEAD
 *color8:#504339
-=======
-*color8:#151210
->>>>>>> 50af087616a9ebbffd8ac2699ef12dc4cc12b152
 
 !red
 *color1:#8c644c
@@ -81,13 +77,8 @@ URxvt*keysym.End: \033[4~
 *color14:#556d70
 
 !white
-<<<<<<< HEAD
 *color7:#bea492
 *color15:#817267
-=======
-*color7:#817267
-*color15:#504339
->>>>>>> 50af087616a9ebbffd8ac2699ef12dc4cc12b152
 
 
 !------------------------------------------------------------------------------
