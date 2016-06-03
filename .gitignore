@@ -1,5 +1,6 @@
 static/.vim/backup/
 static/.vim/undo/
+static/.vim/swap/
 static/.vim/viminfo
 theme_digitalforest/.i3/bin/
 *error.log
