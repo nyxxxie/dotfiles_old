@@ -32,6 +32,8 @@ endif
 " Set the color scheme
 if filereadable("~/.vimtheme")
     source ~/.vimtheme
+else
+    colorscheme basic
 endif
 
 " Make tabs less wide and terrible
