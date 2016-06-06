@@ -18,7 +18,7 @@ endif
 
 " Define colors
 hi Normal                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
-hi Visual                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi Visual                 ctermfg=0   ctermbg=7   guifg=#FFFFFF   guibg=#FFFFFF
 hi Flash                  ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Cursor                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi lCursor                ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
