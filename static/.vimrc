@@ -8,3 +8,10 @@ else
         exe 'source' f
     endfor
 endif
+
+" Set the color scheme
+if filereadable(expand("~/.vimtheme"))
+    colorscheme import_from_file
+else
+    colorscheme default
+endif

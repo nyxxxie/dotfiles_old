@@ -1,4 +1,4 @@
-" Initialization
+""" Initialization
 set background=dark
 
 hi clear
@@ -6,7 +6,7 @@ if exists('syntax_on')
     syntax reset
 endif
 
-let g:colors_name = 'Your name here'
+let g:colors_name = 'Default theme'
 
 if ! has('gui_running')
     if &t_Co != 256
@@ -16,7 +16,7 @@ if ! has('gui_running')
     endif
 endif
 
-" Define colors
+""" Define colors
 hi Normal                 ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Visual                 ctermfg=0   ctermbg=7   guifg=#FFFFFF   guibg=#FFFFFF
 hi Flash                  ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
@@ -122,14 +122,14 @@ hi diffFile               ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi diffNewFile            ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 
 """ Color links
-"hi link htmlTag            xmlTag
-"hi link htmlTagName        xmlTagName
-"hi link htmlEndTag         xmlEndTag
-"
-"hi link phpCommentTitle    vimCommentTitle
-"hi link phpDocTags         vimCommentString
-"hi link phpDocParam        vimCommentTitle
-"
-"hi link diffAdded          DiffAdd
-"hi link diffChanged        DiffChange
-"hi link diffRemoved        DiffDelete
+hi link htmlTag            xmlTag
+hi link htmlTagName        xmlTagName
+hi link htmlEndTag         xmlEndTag
+
+hi link phpCommentTitle    vimCommentTitle
+hi link phpDocTags         vimCommentString
+hi link phpDocParam        vimCommentTitle
+
+hi link diffAdded          DiffAdd
+hi link diffChanged        DiffChange
+hi link diffRemoved        DiffDelete

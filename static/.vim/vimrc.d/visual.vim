@@ -5,9 +5,6 @@ set list
 " Change the split character from | to │
 set fillchars+=vert:│
 
-" Turns on highlighting
-syntax on
-
 " Make n and N highlight search results
 nnoremap <silent> n n:call HLNext(0.2)<cr>
 nnoremap <silent> N N:call HLNext(0.2)<cr>
@@ -29,15 +26,8 @@ if &term =~ '256color'
    set t_ut=
 endif
 
-" Set the color scheme
-if filereadable("~/.vimtheme")
-    source ~/.vimtheme
-else
-    colorscheme basic
-endif
-
 " Make tabs less wide and terrible
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Turn on line numbers
 set number
