@@ -5,16 +5,19 @@
 " nmap <silent> <C-l> :wincmd l<CR>
 
 " Make arrow keys adjust split sizes
-nmap <buffer> <silent> <up> :wincmd +<CR>
-nmap <buffer> <silent> <down> :wincmd -<CR>
-nmap <buffer> <silent> <left> :wincmd <<CR>
-nmap <buffer> <silent> <right> :wincmd ><CR>
+nnoremap <buffer> <silent> <up> :wincmd +<CR>
+nnoremap <buffer> <silent> <down> :wincmd -<CR>
+nnoremap <buffer> <silent> <left> :wincmd <<CR>
+nnoremap <buffer> <silent> <right> :wincmd ><CR>
+
+" Make ctrl+c mimic escape in normal mode
+nnoremap <C-c> <ESC>
 
 " Tab and buffer switching
-map <silent> <leader>] :bnext<cr>
-map <silent> <leader>[ :bprevious<cr>
-map <silent> <leader>} :tabn<cr>
-map <silent> <leader>{ :tabp<cr>
+noremap <silent> <leader>] :bnext<CR>
+noremap <silent> <leader>[ :bprevious<CR>
+noremap <silent> <leader>} :tabn<CR>
+noremap <silent> <leader>{ :tabp<CR>
 
 " Useful for counting multiline operations
 nnoremap <leader>r :set relativenumber!<CR>
