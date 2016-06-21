@@ -179,6 +179,9 @@ conf() {
 # Disable x11's ugly passphrase prompt
 unset SSH_ASKPASS
 
+# Make the cursor be a block
+echo -en "\033[1 q"
+
 # Enable git completion
 # autoload -U compinit && compinit
 

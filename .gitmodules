@@ -58,3 +58,6 @@
 [submodule "static/.vim/bundle/vim-superman"]
 	path = static/.vim/bundle/vim-superman
 	url = https://github.com/jez/vim-superman
+[submodule "static/.vim/bundle/indentLine"]
+	path = static/.vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
