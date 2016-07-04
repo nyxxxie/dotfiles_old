@@ -31,3 +31,6 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 " Turn on line numbers
 set number
+
+" Turn on syntax highlighting
+syntax on

@@ -1,3 +1,5 @@
+filetype on
+
 " Run all files in the config directory
 if has("gui_running")
     for f in split(glob('~/.vim/gvimrc.d/*.vim'), '\n')
