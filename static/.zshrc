@@ -150,30 +150,26 @@ conf() {
     esac
 }
 
-########################### Prompt style ###########################
-# Depends on the git plugin for work_in_progress()
+########################### Oh-my-zsh ###########################
+export ZSH=/home/$USER/.oh-my-zsh
 
-#ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[green]%}["
-#ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
-#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}*%{$reset_color%}"
-#ZSH_THEME_GIT_PROMPT_CLEAN=""
-#
-##Customized git status, oh-my-zsh currently does not allow render dirty status before branch
-#git_custom_status() {
-#  local cb=$(git_current_branch)
-#  if [ -n "$cb" ]; then
-#    echo "$(parse_git_dirty)%{$fg_bold[yellow]%}$(work_in_progress)%{$reset_color%}$ZSH_THEME_GIT_PROMPT_PREFIX$(git_current_branch)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-#  fi
-#}
-#
-## RVM component of prompt
-#ZSH_THEME_RVM_PROMPT_PREFIX="%{$fg[red]%}["
-#ZSH_THEME_RVM_PROMPT_SUFFIX="]%{$reset_color%}"
-#
-## Combine it all into a final right-side prompt
-#RPS1='$(git_custom_status)$(ruby_prompt_info) $EPS1'
-#
-#PROMPT='%{$fg[cyan]%}[%~% ]%(?.%{$fg[green]%}.%{$fg[red]%})%B$%b '
+# OMZ is optional, I only use it for the neat plugins
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+    #ZSH_THEME="gallois"
+    #ZSH_THEME="prey"
+    plugins=(git nmap pyenv tmux)
+
+    source $ZSH/oh-my-zsh.sh
+fi
+
+########################### Prompt style ###########################
+# No idea if this works on bash or not, but here are some squences
+# to change colors:
+#   * %F{color} - Changes foreground color
+#   * %K{color} - Changes background color
+#ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
+
+PS1="%F{15}$USER%F{8}@$(uname -n) :: %F{7}"
 
 ########################### Misc ###########################
 # Disable x11's ugly passphrase prompt
@@ -184,18 +180,5 @@ echo -en "\033[1 q"
 
 # Enable git completion
 # autoload -U compinit && compinit
-
-########################### Oh-my-zsh ###########################
-# OMZ is optional, I only use it for the neat plugins
-
-export ZSH=/home/$USER/.oh-my-zsh
-
-if [ -f $ZSH/oh-my-zsh.sh ]; then
-    #ZSH_THEME="gallois"
-    #ZSH_THEME="prey"
-    plugins=(git nmap pyenv tmux)
-
-    source $ZSH/oh-my-zsh.sh
-fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
