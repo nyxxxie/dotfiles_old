@@ -32,7 +32,7 @@ hi SignColumn             ctermfg=238 ctermbg=234 guifg=#FFFFFF   guibg=#FFFFFF
 hi ColorColumn            ctermfg=238 ctermbg=234 guifg=#FFFFFF   guibg=#FFFFFF
 hi StatusLine             ctermfg=238 ctermbg=234 guifg=#FFFFFF   guibg=#FFFFFF
 hi StatusLineNC           ctermfg=7   ctermbg=1   guifg=#FFFFFF   guibg=#FFFFFF
-hi VertSplit              ctermfg=7   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
+hi VertSplit              ctermfg=0   ctermbg=234 guifg=#FFFFFF   guibg=#FFFFFF
 hi WildMenu               ctermfg=5   ctermbg=234 guifg=#FFFFFF   guibg=#FFFFFF
 hi Directory              ctermfg=4   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
 hi Question               ctermfg=1   ctermbg=0   guifg=#FFFFFF   guibg=#FFFFFF
